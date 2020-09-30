@@ -26,87 +26,45 @@ while True:
         
     result = None
 
-    # if not num1.isdigit() or not  num1.isdigit():
-    #     print('Those are not numbers!')
-    #     continue
-  
-    
-    if operator == '+':
-        try:
+    try:    
+        if operator == '+':
             result = add(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
-    
-
-    elif operator == '-':
-        try:
+        
+        elif operator == '-':
             result = subtract(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
-        
-    elif operator == '*':
-        try:
+         
+        elif operator == '*':
             result = multiply(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
+                   
+        elif operator == '/':
+            result=divide(float(num1),float(num2))
+                   
+        elif operator == 'square':
+            result=square(float(num1),float(num2))
+                      
+        elif operator == 'cube':
+            result=cube(float(num1),float(num2))
+         
+        elif operator == 'pow':
+            result=power(float(num1),float(num2))         
             
-    elif operator == '/':
-        try:
-             result=divide(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
+        elif operator == 'mod':
+            result=mod(float(num1),float(num2))
            
-    elif operator == 'square':
-        try:
-              result=square(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
            
-    elif operator == 'cube':
-        try:
-              result=cube(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
-            
-    elif operator == 'pow':
-        try:
-              result=power(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
-            
-    elif operator == 'mod':
-        try:
-               result=mod(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
-           
-    elif operator == 'x+':
-        try:
-            result=madd_mult(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
+        elif operator == 'x+':
+            result=madd_mult(float(num1),float(num2))        
           
-    elif operator == 'cubes':
-        git committry:
-            result=add_cubes(float(num1),float(num2))
-           # break  
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
-            
-        
-    else:
-        result ="Please enter an operator with two integers"
+        elif operator == 'cubes':
+             result=add_cubes(float(num1),float(num2))
+                 
+        else:
+            result ="Please enter an operator with two integers"
+         
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again...")
 
     print(result)
 
-#str.lstrip('-').isdigit()
+
 
